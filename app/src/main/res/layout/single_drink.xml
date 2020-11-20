@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="100">
+
+    <ImageView
+        android:id="@+id/cocktailImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_weight="33.3"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="66.6">
+
+        <me.grantland.widget.AutofitLayout
+            android:id="@+id/autofitLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/autofitLayout4"
+            app:layout_constraintTop_toBottomOf="@+id/searchbarEditText">
+
+            <TextView
+                android:id="@+id/coctailNameLabel1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+                android:textSize="30sp" />
+        </me.grantland.widget.AutofitLayout>
+
+        <TextView
+            android:id="@+id/cocktailDescriptionLabel1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+</LinearLayout>

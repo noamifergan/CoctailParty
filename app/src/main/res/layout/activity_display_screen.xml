@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".displayScreen">
+
+    <TextView
+        android:id="@+id/coctailNameTextview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="Cocktail name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cocktailCategoryTextview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="Category"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coctailNameTextview" />
+
+    <me.grantland.widget.AutofitLayout
+        android:id="@+id/measurmentsContainer"
+        android:layout_width="150dp"
+        android:layout_height="184dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ingredientsContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/cocktailCategoryTextview">
+
+        <TextView
+            android:id="@+id/measurmentsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+    </me.grantland.widget.AutofitLayout>
+
+    <me.grantland.widget.AutofitLayout
+        android:id="@+id/instructionsContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ingredientsContainer">
+
+        <TextView
+            android:id="@+id/instructionsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+    </me.grantland.widget.AutofitLayout>
+
+    <me.grantland.widget.AutofitLayout
+        android:id="@+id/ingredientsContainer"
+        android:layout_width="146dp"
+        android:layout_height="193dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="35dp"
+        app:layout_constraintBottom_toTopOf="@+id/instructionsContainer"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cocktailCategoryTextview">
+
+        <TextView
+            android:id="@+id/ingredientsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+    </me.grantland.widget.AutofitLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="205dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

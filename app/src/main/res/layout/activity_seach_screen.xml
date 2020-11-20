@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".searchScreen">
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:gravity="center"
+        android:text="What are we drinking?"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="222dp" />
+
+    <EditText
+        android:id="@+id/searchbarEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:hint="Search..."
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:imeOptions="actionSearch"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <me.grantland.widget.AutofitLayout
+        android:id="@+id/autofitLayout5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/autofitLayout4"
+        app:layout_constraintTop_toBottomOf="@+id/searchbarEditText">
+
+        <Button
+            android:id="@+id/searchByRandom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="handleSelected"
+            android:singleLine="true"
+            android:tag="3"
+            android:text="Random" />
+    </me.grantland.widget.AutofitLayout>
+
+    <me.grantland.widget.AutofitLayout
+        android:id="@+id/autofitLayout4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/autofitLayout5"
+        app:layout_constraintStart_toEndOf="@+id/autofitLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/searchbarEditText">
+
+        <Button
+            android:id="@+id/searchByCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="handleSelected"
+            android:singleLine="true"
+            android:tag="2"
+            android:text="Category" />
+    </me.grantland.widget.AutofitLayout>
+
+    <me.grantland.widget.AutofitLayout
+        android:id="@+id/autofitLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/autofitLayout4"
+        app:layout_constraintStart_toEndOf="@+id/autofitLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/searchbarEditText">
+
+        <Button
+            android:id="@+id/searchByIngredient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="handleSelected"
+            android:singleLine="true"
+            android:tag="1"
+            android:text="Ingredient" />
+    </me.grantland.widget.AutofitLayout>
+
+    <me.grantland.widget.AutofitLayout
+        android:id="@+id/autofitLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/autofitLayout3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchbarEditText">
+
+        <Button
+            android:id="@+id/searchByName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="handleSelected"
+            android:singleLine="true"
+            android:tag="0"
+            android:text="Name" />
+    </me.grantland.widget.AutofitLayout>
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="347dp"
+        android:layout_height="87dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="75dp"
+        android:onClick="getCoctails"
+        android:text="Search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
